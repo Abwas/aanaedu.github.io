@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<!-- Projects Grid Section -->
+<section id="projects" >
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2>Projects</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            {% for post in site.projects %}
+            <div class="col-sm-4 project-item">
+                <a href="#{{ post.modalID }}" class="project-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{ site.baseurl }}/{{ post.img }}" class="img-responsive" alt="">
+                </a>
+                <div class="project-caption">
+                    <h4><a href="{{ post.link }}" target="_blank">{{post.title}}</a></h4>
+                    <p class="post-meta">{{ post.technologies }}</p>
+                </div>
+                <div class="project-description">
+                    <p class="text-right">{{ post.excerpt | truncatewords: 20}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+</section>

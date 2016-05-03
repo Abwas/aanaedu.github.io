@@ -1,0 +1,66 @@
+---
+layout: default
+comments: true
+---
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" style="margin-top: 80px;">
+        
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d %b, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+        </p>
+
+        <div class="post-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+        <hr>
+        <div>
+          {% if page.categories.size > 0 %} 
+          <span class="post-meta"><i class="fa fa-folder"></i> Filed under: </span>
+          {% endif %} 
+          {% for category in page.categories %} 
+          <span itemprop="category" itemscope itemtype="http://schema.org/Category">
+            <span class="post-meta"itemprop="name">{{ category }}</span>
+          </span>
+          {% endfor %}
+        </div>
+        <div>
+          {% if page.tags.size > 0 %} 
+          <span class="post-meta"><i class="fa fa-tags"></i> </span>
+          {% endif %} 
+          {% for tag in page.tags %} 
+          <span itemprop="tag" itemscope itemtype="http://schema.org/Tag">
+            <span class="label label-default" itemprop="name">{{ tag }}</span>
+          </span>
+          {% endfor %}
+        </div>
+        <br />
+        <hr>
+        {% include share-page.html %}
+      </article>
+
+      {% if site.related_posts != empty %}
+      <aside class="related">
+        <h3>Related posts</h3>
+        <ul class="related-posts">
+          {% for post in site.related_posts limit:3 %}
+          <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
+      {% endif %}
+      
+      {% if page.comments %}
+      <!-- Disgus thread -->
+      {% include comments.html %}
+      {% endif %}
+
+    </div>
+  </div>
+</div>

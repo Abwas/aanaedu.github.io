@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Adria"
+date:   2016-02-02
+img: assets/img/projects/adria-mobile.jpg
+link: https://play.google.com/store/apps/details?id=com.wytelyte.adriathefortuneteller
+modalID: modalAdria
+category: Mobile Development
+technologies: "Android, Java"
+---
+Adria is a Fortune Teller that knows it all. Whatever your question is, Adria reaches into the future, to find the answers to your questions. Just think of a question that can be answered "Yes" or "No", concentrate very, very hard, and shake your phone. Then let Adria the Fortune Teller show you the way!
