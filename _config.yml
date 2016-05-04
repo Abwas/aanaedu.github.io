@@ -7,7 +7,7 @@
 
 # Site settings
 title: Anthony Anaedu
-email: hi@anthonyanaedu.com
+email: tony.anaedu@gmail.com
 tagline: Developing Software Applications and providing IT Solutions to help businesses and individuals
 description: Software Developer - IT Specialist - EE Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -19,7 +19,7 @@ github_username:  aanaedu
 linkedin_username: tony.anaedu
 googleplus_username: tony.anaedu
 email_username: tony.anaedu@gmail.com
-analytics_id: 01234567899
+analytics_id: UA-77274083-1
 
 collections:
   - projects
