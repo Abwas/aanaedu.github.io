@@ -544,6 +544,7 @@ footer span.copyright {
 }
 .navbar-toggle{
     background-color: transparent;
+    margin-left: 15px;
 }
 .navbar-hybrid .navbar-toggle {
     border-color: transparent;
