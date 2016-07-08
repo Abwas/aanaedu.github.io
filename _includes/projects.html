@@ -1,3 +1,4 @@
+{% if site.projects.count() > 0 %}
 <!-- Projects Grid Section -->
     <section id="projects">
         <div class="container">
@@ -7,7 +8,7 @@
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row">
+            <div class="row">            
                 {% for post in site.projects limit: 6 %}
                     <div class="col-sm-4 project-item">
                         <a href="#{{ post.modalID }}" class="project-link" data-toggle="modal">
@@ -27,7 +28,8 @@
                     <a href="{{ site.baseurl }}/projects" class="btn btn-lg btn-success">
                         <i class="fa fa-chevron-right"></i> <strong>VIEW MORE</strong>
                     </a>
-            </div>
+                </div>
             </div>
         </div>
     </section>
+{% endif %}

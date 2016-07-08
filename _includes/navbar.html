@@ -20,9 +20,11 @@
                 <li class="{% if page.title == "Blog" %} active {% endif%}">
                     <a href="{{ site.baseurl }}/blog" >Blog</a>
                 </li>
+                {% if site.projects.count() > 0 %}
                 <li class="{% if page.title == "Projects" %} active {% endif%}">
                     <a href="{{ site.baseurl }}/projects" >Projects</a>
                 </li>
+                {% endif %}
                 <li class="{% if page.title == "About" %} active {% endif%}">
                     <a href="{{ site.baseurl }}/about" >About</a>
                 </li>

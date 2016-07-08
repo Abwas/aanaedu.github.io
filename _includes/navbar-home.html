@@ -20,9 +20,11 @@
                 <li class="page-scroll">
                     <a href="#header">Home</a>
                 </li>
+                {% if site.projects.count() %}
                 <li class="page-scroll">
                     <a href="#projects">Projects</a>
                 </li>
+                {% endif %}
                 <li class="page-scroll">
                     <a href="#about">About</a>
                 </li>
